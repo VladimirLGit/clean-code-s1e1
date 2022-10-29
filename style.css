@@ -35,7 +35,7 @@ body {
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .task-row-wrapper {
@@ -136,7 +136,7 @@ body {
 }
 
 .task-item > .edit-text {
-  width: 226px
+  width: 226px;
 }
 
 .btn.delete .img {
@@ -157,12 +157,12 @@ body {
 
 /* Edit Task */
 .task-list .task-item .edit-text {
-  display: none
+  display: none;
 }
 
 .task-list .task-item.edit-mode .edit-text {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .task-list .task-item.edit-mode .label {
