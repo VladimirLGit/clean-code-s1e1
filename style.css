@@ -12,11 +12,11 @@ body {
   text-align: right;
 }
 
-.header .img {
+.header__img {
   width: 100%;
 }
 
-.header .more-inf {
+.header__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -32,13 +32,15 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
+.add {
+  margin-bottom: 1em;	
+}  
 
-.task-row-wrapper {
+.add__label {
+  display: block;	
+}	
+
+.add__wrapper {
   display: flex;
 }
 
@@ -52,12 +54,12 @@ body {
   user-select: none;
 }
 
-.input,
-.btn {
+.task-item__btn {
   outline: none;
 }
 
-.btn {
+.add__btn,
+.task-item__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,7 +69,8 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
+.add__btn:hover,
+.task-item__btn:hover {
   color: #3a3a3a;
 }
 
@@ -84,6 +87,7 @@ body {
 }
 
 .edit-text {
+  display: inline-block;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -94,6 +98,9 @@ body {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 56%;
+  flex-grow: 1;
+  outline: none;
 }
 
 .edit-text:focus {
@@ -101,13 +108,9 @@ body {
 }
 
 /* New Task */
-.label.title {
+.task-item__label.title {
   display: block;
   margin: 0 0 20px;
-}
-
-.input#new-task {
-  width: 318px;
 }
 
 /* Task list */
@@ -128,7 +131,9 @@ body {
   margin: 0 10px;
 }
 
-.task-item > .label {
+.task-item__label {
+  display: inline-block;
+  flex-grow: 1;
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -139,18 +144,18 @@ body {
   width: 226px;
 }
 
-.btn.delete .img {
+.task-item__btn.delete .task-item__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn.delete .img:hover {
+.task-item__btn.delete .task-item__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.task-list#completed-tasks .label {
+.task-list#completed-tasks .task-item__label {
   text-decoration: line-through;
   color: #888;
 }
@@ -165,6 +170,6 @@ body {
   width: 224px;
 }
 
-.task-list .task-item.edit-mode .label {
+.task-list .task-item.edit-mode .task-item__label {
   display: none;
 }
